@@ -27,12 +27,14 @@ if exists('g:lightline')
   let s:orange = s:getGruvColor('GruvboxOrange')
   let s:green = s:getGruvColor('GruvboxGreen')
   let s:green1 = [ '#95e454', 119 ]
+  let s:red = [ '#fb4934', 119 ]
+  let s:orange1 = [ '#d3869b', 119 ]
 
   let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'tabline':{}, 'terminal':{}}
-  "let s:p.normal.left = [ [ s:bg0, s:fg4 ], [ s:fg4, s:bg2 ] ]
-  let s:p.normal.left = [ [ s:bg0, s:green ], [ s:fg4, s:bg2 ] ]
-  "let s:p.normal.right = [ [ s:bg0, s:fg4 ], [ s:fg4, s:bg2 ] ]
-  let s:p.normal.right = [ [ s:bg0, s:green ], [ s:fg4, s:bg2 ] ]
+  let s:p.normal.left = [ [ s:bg0, s:fg4 ], [ s:fg4, s:bg2 ] ]
+  "let s:p.normal.left = [ [ s:bg0, s:green ], [ s:fg4, s:bg2 ] ]
+  let s:p.normal.right = [ [ s:bg0, s:fg4 ], [ s:fg4, s:bg2 ] ]
+  "let s:p.normal.right = [ [ s:bg0, s:green ], [ s:fg4, s:bg2 ] ]
   let s:p.normal.middle = [ [ s:fg4, s:bg1 ] ]
   let s:p.inactive.right = [ [ s:bg4, s:bg1 ], [ s:bg4, s:bg1 ] ]
   let s:p.inactive.left =  [ [ s:bg4, s:bg1 ], [ s:bg4, s:bg1 ] ]
@@ -54,7 +56,7 @@ if exists('g:lightline')
   let s:p.tabline.middle = [ [ s:bg0, s:bg0 ] ]
   let s:p.tabline.right = [ [ s:bg0, s:orange ] ]
   let s:p.normal.error = [ [ s:bg0, s:orange ] ]
-  let s:p.normal.warning = [ [ s:bg2, s:yellow ] ]
+  let s:p.normal.warning = [ [ s:bg2, s:red ] ]
 
   let g:lightline#colorscheme#gruvbox#palette = lightline#colorscheme#flatten(s:p)
 endif
